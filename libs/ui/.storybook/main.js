@@ -1,3 +1,4 @@
+const path = require('path');
 const rootMain = require('../../../.storybook/main');
 
 module.exports = {
@@ -8,8 +9,15 @@ module.exports = {
   ],
   addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
   framework: {
-    name: '@storybook/react-webpack5',
-    options: {},
+    name: '@storybook/nextjs',
+    options: {
+      options: {
+        nextConfigPath: path.resolve(
+          __dirname,
+          '../apps/next-app/next.config.js'
+        ),
+      },
+    },
   },
 };
 
