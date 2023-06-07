@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './index.module.css';
 
 export function Index() {
@@ -8,6 +9,12 @@ export function Index() {
    */
   return (
     <div className={styles.page}>
+      <Image
+        src="/images/blackcat.jpeg"
+        alt="black cat"
+        width={500}
+        height={500}
+      />
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
